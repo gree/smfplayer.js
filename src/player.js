@@ -342,6 +342,7 @@ SMF.Player.prototype.playSequence = function() {
       );
     } else {
       // loop
+      window.postMessage('endoftrack','*');
       if (player.enableCC111Loop && mark[0] && typeof mark[0]['pos'] === 'number') {
         pos = mark[0]['pos'];
         player.timer = setTimeout(update, 0);
